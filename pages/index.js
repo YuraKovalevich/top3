@@ -11,12 +11,10 @@ document.querySelector('.burger').addEventListener('click', function () {
     headerMenu.classList.toggle('open');
     body.classList.toggle('no-scroll');
 
-    // Показываем или скрываем кнопки login и signup в зависимости от состояния бургер меню
     if (headerMenu.classList.contains('open')) {
         loginButton.style.display = 'block';
         signupButton.style.display = 'block';
     } else {
-        // Скрываем кнопки, если бургер меню закрыто
         loginButton.style.display = 'none';
         signupButton.style.display = 'none';
     }
