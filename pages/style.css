@@ -262,13 +262,13 @@ body {
     display: flex;
     flex-direction: column;
     height: 100%;
-    animation: scrollUp 10s linear infinite;
+    animation: scrollUp 7s linear infinite;
 }
 .position span {
     display: flex;
     flex-direction: column;
     height: 200%;
-    animation: scrollUp 10s linear infinite;
+    animation: scrollUp 7s linear infinite;
     justify-content: space-around;
 }
 .position img{
@@ -277,7 +277,7 @@ body {
 
 
 .lineScrollDown div {
-    animation: scrollDown 10s linear infinite;
+    animation: scrollDown 7s linear infinite;
 }
 
 @keyframes scrollUp {
@@ -300,7 +300,7 @@ body {
 
 
 .Crown{
-    padding-top: 120px;
+    padding-top: 90px;
     border: 3px solid white;
     border-radius: 100px;
 }
@@ -395,6 +395,9 @@ body {
     padding: 16px 64px;
     background-color: #311212;
     border-radius: 196px;
+}
+.scroll__el:hover{
+    cursor: pointer;
 }
 
 .active {
