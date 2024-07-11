@@ -570,6 +570,12 @@ body {
 }
 
 @media (max-width: 996px) {
+    .language span{
+        display: none;
+    }
+    .language-list a{
+        padding:12px 11px ;
+    }
 
     .no-scroll {
         overflow: hidden;
@@ -599,23 +605,28 @@ body {
         width: 140px;
         font-size: 16px;
         z-index: 65;
-        padding: 12px  160px 12px 110px;
+        padding: 12px 160px 12px 110px;
     }
-    .header__button p{
+    .header__button p {
+        margin: 0 auto;
         width: 70px;
     }
-    .login{
-        text-align: left;
+    .login, .signup {
+        width: 100%;
+        max-width: calc(100% - 40px);
+        box-sizing: border-box;
+    }
+    .login {
         position: absolute;
         top: 460px;
+        left: 20px;
         right: 20px;
     }
-    .signup{
-        text-align: left;
+    .signup {
         position: absolute;
         top: 520px;
+        left: 20px;
         right: 20px;
-
     }
 
     .header__menu {
@@ -635,7 +646,7 @@ body {
         animation: burgerAnimation 0.4s;
     }
 
-    .open, .language{
+    .open, .language {
         display: flex;
         z-index: 16;
     }
@@ -677,7 +688,6 @@ body {
         padding: 15px 107px;
         font-size: 18px;
         line-height: 23px;
-
     }
 
     /*=====================*/
@@ -723,7 +733,6 @@ body {
         padding-top: 0;
         width: 100px;
     }
-
 
     .lineScrollDown div {
         animation: scrollHorizontalLeft 3s linear infinite;
@@ -779,8 +788,9 @@ body {
         right: 16px;
         z-index: 10;
     }
-
 }
+
+
 
 @keyframes burgerAnimation {
     from {
