@@ -3,22 +3,44 @@ function selectLanguage(language) {
 }
 document.querySelector('.burger').addEventListener('click', function () {
     this.classList.toggle('active');
-    var headerMenu = document.querySelector('.header__menu');
-    var loginButton = document.querySelector('.login');
-    var signupButton = document.querySelector('.signup');
-    var body = document.body;
+    let headerMenu = document.querySelector('.header__menu');
+    let loginButton = document.querySelector('.login');
+    let signupButton = document.querySelector('.signup');
+    let body = document.body;
 
     headerMenu.classList.toggle('open');
     body.classList.toggle('no-scroll');
 
-    if (headerMenu.classList.contains('open')) {
+    if (window.innerWidth < 988) {
+        if (headerMenu.classList.contains('open')) {
+            loginButton.style.display = 'block';
+            signupButton.style.display = 'block';
+        } else {
+            loginButton.style.display = 'none';
+            signupButton.style.display = 'none';
+        }
+    }
+});
+
+window.addEventListener('resize', function () {
+    let loginButton = document.querySelector('.login');
+    let signupButton = document.querySelector('.signup');
+
+    if (window.innerWidth >= 988) {
         loginButton.style.display = 'block';
         signupButton.style.display = 'block';
     } else {
-        loginButton.style.display = 'none';
-        signupButton.style.display = 'none';
+        let headerMenu = document.querySelector('.header__menu');
+        if (headerMenu.classList.contains('open')) {
+            loginButton.style.display = 'block';
+            signupButton.style.display = 'block';
+        } else {
+            loginButton.style.display = 'none';
+            signupButton.style.display = 'none';
+        }
     }
 });
+
 
 
 
